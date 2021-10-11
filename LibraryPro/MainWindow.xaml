@@ -1,0 +1,23 @@
+﻿<Window x:Class="LibraryPro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:LibraryPro"
+        xmlns:vw="clr-namespace:LibraryPro.Views"
+        mc:Ignorable="d"
+        Title="Library" Height="450" Width="800" >
+    <Window.Resources>
+        <vw:LibraryUC x:Key="Library"/>
+    </Window.Resources>
+    
+    <Grid x:Name="grid" Background="CornflowerBlue" Margin="0,10">
+        <StackPanel Orientation="Horizontal" Height="40" VerticalAlignment="Top" Margin="0,10" HorizontalAlignment="Center">
+            <Button x:Name="btnLibrary" Content="Library" MinWidth="100" Margin="10,0" Background="GhostWhite" FontSize="20"
+                    Click="btnLibrary_Click" BorderThickness="2" BorderBrush="Black"/>
+            <Button x:Name="btnCharts" Content="Chart" MinWidth="100" Margin="10,0" Background="GhostWhite" FontSize="20"
+                     BorderThickness="2" BorderBrush="Black"/>
+        </StackPanel>
+        <Frame x:Name="Main" Margin="0,60,0,0" NavigationUIVisibility="Hidden" />
+    </Grid>
+</Window>
